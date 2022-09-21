@@ -8,9 +8,12 @@ git push -u origin main
 
 b.
 git revert commit_hash --no-edit
-git push origin <branch_name>
+git push -f origin <branch_name>
 
 c.
+git add .
+git commit -m 'Added .gitignore file'
+git push -f
 Include the necessary files extension in ".gitignore" file 
 
 d.
@@ -29,6 +32,9 @@ git branch -b my_develop_branch
 
 4.
 git branch feature1
+git add . 
+git commit sau git stash ( salvam schimbarile inainte ca sa ne mutam pe branch-ul unde vom face schimbari )
+git checkout mainBranch sau dev ( de unde creste bugFix )
 git checkout -b bugFix
 git add .
 git commit -m 'Message'
